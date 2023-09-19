@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd0ab3a2b17e8574ca737ee27569ce9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrustForce: 75
+  thrustForce: 100
   rotationSpeed: 200
   gun: {fileID: 673882691}
   bulletPrefab: {fileID: 3119034267680137926, guid: 9fc8ff81c1e25ad4998e42c08e9ccd80, type: 3}
@@ -496,7 +496,7 @@ Transform:
   m_GameObject: {fileID: 1651392866}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: -0.06, z: 0}
+  m_LocalPosition: {x: 0.02, y: -0.06, z: 1}
   m_LocalScale: {x: 2.1451, y: 2.1451, z: 2.1451}
   m_ConstrainProportionsScale: 0
   m_Children: []
