@@ -534,7 +534,7 @@ MonoBehaviour:
   asteriodPrefab: {fileID: 2260904373704988056, guid: 3035302d891517a4a8a11f29fef0b33b, type: 3}
   spawnRatePerMinute: 30
   spawnRateIncrement: 1
-  xlimit: 6
+  xlimit: 10
   maxTimeLife: 4
 --- !u!1 &632257536
 GameObject:
