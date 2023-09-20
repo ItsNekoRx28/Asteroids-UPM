@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class Bullet : MonoBehaviour
 {
@@ -23,10 +25,22 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision){
         if(collision.gameObject.CompareTag("Enemy")){ 
+            IncreaseScore();
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
         else
             Debug.Log("He collisionado con otra cosa...");
+    }
+
+    private void IncreaseScore(){
+        Player.score++;
+        Debug.Log(Player.score);
+        UpdateScoreText();
+    }
+
+    private void UpdateScoreText(){
+        GameObject UI = GameObject.FindWithTag("UI");
+        UI.GetComponent<Text>().text = "SCORE: " + Player.score;
     }
 }

@@ -11,6 +11,9 @@ public class Player : MonoBehaviour
 
     public GameObject gun, bulletPrefab;
     private Rigidbody _rigid;
+
+    public static int score = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,9 +41,12 @@ public class Player : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision){
-        if(collision.gameObject.tag == "Enemy")
+        if(collision.gameObject.tag == "Enemy"){
+            Player.score = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        else
+        }
+        else{
             Debug.Log("He collisionado con otra cosa...");
+        }     
     }
 }
