@@ -227,6 +227,8 @@ MonoBehaviour:
   rotationSpeed: 200
   gun: {fileID: 673882691}
   bulletPrefab: {fileID: 3119034267680137926, guid: 9fc8ff81c1e25ad4998e42c08e9ccd80, type: 3}
+  xBorderLimit: 10
+  yBorderLimit: 6
 --- !u!136 &62081736
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -311,7 +313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -232}
+  m_AnchoredPosition: {x: 0, y: -335}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &191358001

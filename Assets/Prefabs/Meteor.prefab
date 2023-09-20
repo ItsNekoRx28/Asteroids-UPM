@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Mmeteor: {fileID: 6420038133580593891, guid: b4ede62aa71595fc59f808355af7fd00, type: 3}
-  fuerzaExplosion: 10
+  fuerzaExplosion: 5
 --- !u!136 &7532764879772968040
 CapsuleCollider:
   m_ObjectHideFlags: 0

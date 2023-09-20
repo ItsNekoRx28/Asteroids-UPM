@@ -14,6 +14,10 @@ public class Player : MonoBehaviour
 
     public static int score = 0;
 
+    private Vector3 newPos;
+    public float xBorderLimit = 10f;
+    public float yBorderLimit = 10f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +27,18 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var newPos = transform.position;
+        if (newPos.x > xBorderLimit){
+            newPos.x = -xBorderLimit+1;
+        }else if (newPos.x < -xBorderLimit){
+            newPos.x = xBorderLimit-1;
+        }else if (newPos.y > yBorderLimit){
+            newPos.y = -yBorderLimit+1;
+        }else if (newPos.y < -yBorderLimit){
+            newPos.y = yBorderLimit-1;
+        }
+        transform.position = newPos;
+
         float rotation = Input.GetAxis("Horizontal") * Time.deltaTime;
         float thrust = Input.GetAxis("Vertical") * Time.deltaTime;
 

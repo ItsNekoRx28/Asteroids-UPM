@@ -15,17 +15,17 @@ public class Meteor : MonoBehaviour
         Destroy(gameObject,tiempoDeVida);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-        private void OnDestroy()
-    {
-        CrearObjetosNuevos();
+    private void OnCollisionEnter(Collision collision){
+        if(collision.gameObject.CompareTag("Bullet")){ 
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+            CreateMinimeteors();
+        }
+        else
+            Debug.Log("He collisionado con otra cosa...");
     }
 
-    private void CrearObjetosNuevos()
+    private void CreateMinimeteors()
     {
         // Crear dos objetos nuevos
         
