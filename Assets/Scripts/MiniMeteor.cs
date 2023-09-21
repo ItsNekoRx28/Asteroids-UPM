@@ -17,4 +17,11 @@ public class MiniMeteor : MonoBehaviour
     {
         
     }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.tag == "Enemy"){
+            Physics.IgnoreCollision(other.gameObject.GetComponent<Collider>(),gameObject.GetComponent<Collider>() );
+        }
+    }
 }
