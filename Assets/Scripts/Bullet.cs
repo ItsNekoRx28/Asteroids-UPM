@@ -16,12 +16,13 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, maxLifeTime);
+        //Invoke("SetFalse",2f); // disable after 5 seconds
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         transform.Translate(speed * targetVector * Time.deltaTime);
     }
 
@@ -29,7 +30,7 @@ public class Bullet : MonoBehaviour
         if(collision.gameObject.CompareTag("Enemy")){ 
             IncreaseScore();
             Destroy(collision.gameObject);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         else
             Debug.Log("He collisionado con otra cosa...");
@@ -45,4 +46,12 @@ public class Bullet : MonoBehaviour
         GameObject UI = GameObject.FindWithTag("UI");
         UI.GetComponent<Text>().text = "SCORE: " + Player.score;
     }
+
+    public void SetFalse()
+    {
+        Debug.Log("Estoy aqui");
+        gameObject.SetActive(false);
+
+    }
+    
 }
