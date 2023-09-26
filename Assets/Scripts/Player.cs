@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         _rigid = GetComponent<Rigidbody>();
+        poolBalas = new List<GameObject>();
         for (int i = 0; i < cantidadInicial; i++)
         {
             GameObject bala = Instantiate(bulletPrefab);

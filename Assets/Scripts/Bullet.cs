@@ -46,12 +46,5 @@ public class Bullet : MonoBehaviour
         GameObject UI = GameObject.FindWithTag("UI");
         UI.GetComponent<Text>().text = "SCORE: " + Player.score;
     }
-
-    public void SetFalse()
-    {
-        Debug.Log("Estoy aqui");
-        gameObject.SetActive(false);
-
-    }
     
 }
